@@ -456,7 +456,7 @@ def board(board: Optional[chess.BaseBoard] = None, *,
         try:
             color, opacity = _select_color(colors, " ".join(["arrow", color]))
         except KeyError:
-            opacity = 1.0
+            color, opacity = _color(color)
 
         tail_file = chess.square_file(tail)
         tail_rank = chess.square_rank(tail)
